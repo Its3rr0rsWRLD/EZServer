@@ -22,6 +22,9 @@ mkdir "EZServer $version"
 cp "/Users/bradygustafson/Downloads/server.jar" "EZServer $version"
 # Run server.jar in the new directory.
 cd "EZServer $version"
+clear
+echo "Server is now running. To stop the server, use the 'stop' command."
+sleep 2
 java -Xmx1024M -Xms1024M -jar server.jar nogui
 # Change the text of the eula.txt file to "true".
 echo "eula=true" > eula.txt
@@ -84,8 +87,6 @@ resource-pack-sha1=
 max-world-size=29999984
 " >> eula.txt
 clear
-echo "Server is now running. To stop the server, use the 'stop' command."
-sleep 2
 # Run the server.
 java -Xmx1024M -Xms1024M -jar server.jar nogui
 clear
